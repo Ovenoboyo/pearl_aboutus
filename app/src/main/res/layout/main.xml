@@ -6,6 +6,12 @@
     android:background="@android:color/darker_gray"
     android:fitsSystemWindows="true">
 
+    <View
+        android:id="@+id/dimmer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/black" />
+
     <View android:id="@+id/center"
         android:layout_gravity="center"
         android:layout_marginTop="0dp"
@@ -17,8 +23,8 @@
         android:id="@+id/topimg"
         android:layout_width="wrap_content"
         android:layout_height="300dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="top|center"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
         android:clickable="true"
         android:src="@drawable/pearl" />
 

@@ -1,6 +1,9 @@
 package com.pearl.about;
 
+import android.app.WallpaperManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +13,7 @@ import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener{
 
 
@@ -17,10 +21,21 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     private ViewPagerAdapter mViewPagerAdapter;
     private ArrayList<ViewPagerContainer> mContents;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        WallpaperManager wallpaperManager = WallpaperManager.getInstance(this);
+        Drawable wallpaperDrawable = wallpaperManager.getDrawable();
+
         setContentView(R.layout.main);
+
+        CoordinatorLayout container = findViewById(R.id.container);
+        container.setBackground(wallpaperDrawable);
+
+        View dimmer = findViewById(R.id.dimmer);
+        dimmer.getBackground().setAlpha(180);
 
         mViewPager = findViewById(R.id.viewPager);
         mContents = new ArrayList<>();
