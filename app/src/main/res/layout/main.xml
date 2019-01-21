@@ -10,7 +10,7 @@
         android:id="@+id/dimmer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:color/black" />
+        android:background="@color/background" />
 
     <View android:id="@+id/center"
         android:layout_gravity="center"

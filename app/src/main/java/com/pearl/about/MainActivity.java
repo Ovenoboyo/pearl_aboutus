@@ -1,41 +1,63 @@
 package com.pearl.about;
 
+import android.Manifest;
 import android.app.WallpaperManager;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnLongClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnLongClickListener {
 
 
     private ViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
     private ArrayList<ViewPagerContainer> mContents;
+    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 886;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        WallpaperManager wallpaperManager = WallpaperManager.getInstance(this);
-        Drawable wallpaperDrawable = wallpaperManager.getDrawable();
-
         setContentView(R.layout.main);
 
-        CoordinatorLayout container = findViewById(R.id.container);
-        container.setBackground(wallpaperDrawable);
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.READ_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
 
-        View dimmer = findViewById(R.id.dimmer);
-        dimmer.getBackground().setAlpha(180);
+            // Permission is not granted
+            // Should we show an explanation?
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                // Show an explanation to the user *asynchronously* -- don't block
+                // this thread waiting for the user's response! After the user
+                // sees the explanation, try again to request the permission.
+            } else {
+                // No explanation needed; request the permission
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                        MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+
+                // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
+                // app-defined int constant. The callback method gets the
+                // result of the request.
+            }
+        } else {
+            // Permission has already been granted
+        }
 
         mViewPager = findViewById(R.id.viewPager);
         mContents = new ArrayList<>();
@@ -66,8 +88,8 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     }
 
     @Override
-    public boolean onLongClick(View v)  {
-        switch(v.getId()) {
+    public boolean onLongClick(View v) {
+        switch (v.getId()) {
             case R.id.topimg:
                 new ParticleSystem(this, 100, R.drawable.kek, 5000)
                         .setSpeedRange(0.1f, 0.25f)
@@ -76,5 +98,37 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         }
 
         return true;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode,
+                                           String permissions[], int[] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE: {
+                // If request is cancelled, the result arrays are empty.
+                if (grantResults.length > 0
+                        && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+
+                    WallpaperManager wallpaperManager = WallpaperManager.getInstance(this);
+                    Drawable wallpaperDrawable = wallpaperManager.getDrawable();
+
+                    CoordinatorLayout container = findViewById(R.id.container);
+                    container.setBackground(wallpaperDrawable);
+
+                    View dimmer = findViewById(R.id.dimmer);
+                    dimmer.getBackground().setAlpha(180);
+                    return;
+                } else {
+                    // permission denied, boo! Disable the
+                    // functionality that depends on this permission.
+                    Toast.makeText(this, "Live with the basic background then :''(",
+                            Toast.LENGTH_LONG).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request.
+        }
     }
 }
