@@ -1,7 +1,6 @@
 package com.pearl.about;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.PagerAdapter;
@@ -15,12 +14,10 @@ import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ViewPagerAdapter extends PagerAdapter implements CardAdapter {
+public class ViewPagerAdapter extends PagerAdapter {
 
     private List<ViewPagerContainer> contents;
     private Context mContext;
-
-    Intent myIntent;
 
 
     public ViewPagerAdapter(List<ViewPagerContainer> contents, Context mContext) {
@@ -86,7 +83,7 @@ public class ViewPagerAdapter extends PagerAdapter implements CardAdapter {
         container.removeView((View)object);
     }
 
-    public static void showDialog(Context context, int id ) {
+    private static void showDialog(Context context, int id) {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
                 context );
 

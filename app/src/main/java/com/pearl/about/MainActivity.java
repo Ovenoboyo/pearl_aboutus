@@ -1,27 +1,16 @@
 package com.pearl.about;
 
-import android.graphics.Point;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Switch;
 
 import com.plattysoft.leonids.ParticleSystem;
-import com.plattysoft.leonids.modifiers.ScaleModifier;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener{
-
-    int baseElevation =10;
-
-    Point screen = new Point();
 
 
     private ViewPager mViewPager;
