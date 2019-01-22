@@ -1,6 +1,7 @@
 package com.pearl.about;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.view.PagerAdapter;
@@ -18,6 +19,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     private List<ViewPagerContainer> contents;
     private Context mContext;
+    private Intent i = null;
 
 
     public ViewPagerAdapter(List<ViewPagerContainer> contents, Context mContext) {
@@ -51,20 +53,57 @@ public class ViewPagerAdapter extends PagerAdapter {
         TextView cat = view.findViewById(R.id.category);
         cat.setText(contents.get(position).getCat());
 
+        TextView desc = view.findViewById(R.id.desc);
+        desc.setText(contents.get(position).getDesc());
+
         FloatingActionButton fab = view.findViewById(R.id.fab);
 
         fab.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 switch (position) {
                     case 0:
-                        showDialog(mContext, R.layout.dialog1);
+                        showDialog(mContext, R.layout.dialog0);
                         break;
 
                     case 1:
-
+                        showDialog(mContext, R.layout.dialog1);
                         break;
 
                     case 2:
+                        showDialog(mContext, R.layout.dialog2);
+                        break;
+
+                    case 3:
+                        showDialog(mContext, R.layout.dialog3);
+                        break;
+
+                    case 4:
+                        showDialog(mContext, R.layout.dialog4);
+                        break;
+
+                    case 5:
+                        showDialog(mContext, R.layout.dialog5);
+                        break;
+
+                    case 6:
+                        showDialog(mContext, R.layout.dialog6);
+                        break;
+
+
+                    case 7:
+                        if (i == null) {
+                            i = new Intent(mContext, Maintainers.class);
+                            mContext.startActivity(i);
+                        }
+                        i = null;
+                        break;
+
+                    case 8:
+                        if (i == null) {
+                            i = new Intent(mContext, Testers.class);
+                            mContext.startActivity(i);
+                        }
+                        i = null;
                         break;
 
                     default:

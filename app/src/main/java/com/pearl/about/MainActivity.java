@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                 // result of the request.
             }
         } else {
-            // Permission has already been granted
+            SetBackground();
         }
 
         mViewPager = findViewById(R.id.viewPager);
@@ -65,22 +65,24 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         ImageView topimg = findViewById(R.id.topimg);
         topimg.setOnLongClickListener(this);
 
-
-        int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3};
-        String cat[] = {getString(R.string.dev1), getString(R.string.dev2), getString(R.string.dev3)};
+        //sagar,          satyam,         Oveno,           rahul,           parth,           nikhil,          dimitry
+        int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3, R.drawable.dev4, R.drawable.dev5, R.drawable.dev6, R.drawable.dev7, R.drawable.maintainers, R.drawable.testers};
+        String cat[] = {getString(R.string.dev1), getString(R.string.dev2), getString(R.string.dev3), getString(R.string.dev4), getString(R.string.dev5), getString(R.string.dev6), getString(R.string.dev7), getString(R.string.maintainers_title), getString(R.string.testers_title)};
+        String desc[] = {getString(R.string.dev_short1), getString(R.string.dev_short2), getString(R.string.dev_short3), getString(R.string.dev_short4), getString(R.string.dev_short5), getString(R.string.dev_short6), getString(R.string.dev_short7), getString(R.string.maintainers_short), getString(R.string.testers_short)};
 
         for (int i = 0; i < icon.length; i++) {
             ViewPagerContainer viewpagercontainer = new ViewPagerContainer();
 
             viewpagercontainer.icon = icon[i];
             viewpagercontainer.cat = cat[i];
+            viewpagercontainer.desc = desc[i];
 
             mContents.add(viewpagercontainer);
         }
 
 
         mViewPagerAdapter = new ViewPagerAdapter(mContents, this);
-        mViewPager.setOffscreenPageLimit(5);
+        mViewPager.setOffscreenPageLimit(10);
         mViewPager.setClipToPadding(false);
         mViewPager.setPageMargin(150);
         mViewPager.setPageTransformer(false, new ZoomInTransformer());
@@ -108,15 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                 // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-
-                    WallpaperManager wallpaperManager = WallpaperManager.getInstance(this);
-                    Drawable wallpaperDrawable = wallpaperManager.getDrawable();
-
-                    CoordinatorLayout container = findViewById(R.id.container);
-                    container.setBackground(wallpaperDrawable);
-
-                    View dimmer = findViewById(R.id.dimmer);
-                    dimmer.getBackground().setAlpha(180);
+                    SetBackground();
                     return;
                 } else {
                     // permission denied, boo! Disable the
@@ -130,5 +124,17 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             // other 'case' lines to check for other
             // permissions this app might request.
         }
+    }
+
+
+    private void SetBackground() {
+        WallpaperManager wallpaperManager = WallpaperManager.getInstance(this);
+        Drawable wallpaperDrawable = wallpaperManager.getDrawable();
+
+        CoordinatorLayout container = findViewById(R.id.container);
+        container.setBackground(wallpaperDrawable);
+
+        View dimmer = findViewById(R.id.dimmer);
+        dimmer.getBackground().setAlpha(150);
     }
 }

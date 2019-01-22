@@ -4,6 +4,7 @@ public class ViewPagerContainer {
 
     public String cat;
     public int icon;
+    public String desc;
 
     public int getIcon() {
         return icon;
@@ -11,5 +12,9 @@ public class ViewPagerContainer {
 
     public String getCat() {
         return cat;
+    }
+
+    public String getDesc() {
+        return desc;
     }
 }

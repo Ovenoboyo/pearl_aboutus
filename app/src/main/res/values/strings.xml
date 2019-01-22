@@ -1,7 +1,37 @@
 <resources>
     <string name="app_name">About Us</string>
-    <string name="dev1">segor</string>
+    <string name="dev1">Sagar Rokade</string>
+    <string name="dev_desc1">Android Lover Learning More About Android.</string>
+    <string name="dev_short1">Founder | Lead Developer.</string>
     <string name="dev2">shatyam</string>
-    <string name="dev3">ovenboy</string>
+    <string name="dev_desc2">Some random nigga who didn\'t gimme the details.</string>
+    <string name="dev_short2">Random nigga.</string>
+    <string name="dev3">Ovenoboyo</string>
+    <string name="dev_desc3">The person you blame when the custom apps in this ROM suck.</string>
+    <string name="dev_short3">App developer | Memer</string>
+    <string name="dev4">Rahul Mishra</string>
+    <string name="dev_desc4">Sucks balls</string>
+    <string name="dev_short4">Co-founder | Lead-Developer</string>
+    <string name="dev5">Parth Purvesh</string>
+    <string name="dev_desc5">The one who wasn\'t needed in the ROM team so jumped to the Website.</string>
+    <string name="dev_short5">Website Developer and Server Manager</string>
+    <string name="dev6">Nikhil Parte</string>
+    <string name="dev_desc6">Subscribe to PewDiePie and all the designs.</string>
+    <string name="dev_short6">Graphics Designer</string>
+    <string name="dev7">Dmitry Minko</string>
+    <string name="dev_desc7">Themes and stuff.</string>
+    <string name="dev_short7">Themer</string>
+    <string name="maintainers_title">Maintainers</string>
+    <string name="testers_title">Testers</string>
+    <string name="maintainers_short">A bunch of random people</string>
+    <string name="testers_short">Lads who made this possible</string>
+
+    <!-- Pearl Additions -->
+    <string name="maintainer_description">Maintains for %1$s</string>
+    <string name="tester_description">Tests for %1$s</string>
+    <string name="pearl_about_info">Credits and Maintainers</string>
+    <string name="credits">Credits</string>
+    <string name="tester">Testers</string>
+    <string name="title_activity_settings">Settings</string>
 
 </resources>

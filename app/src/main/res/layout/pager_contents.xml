@@ -17,8 +17,7 @@
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:layout_marginEnd="10dp"
+            android:layout_gravity="bottom|center"
             android:layout_marginBottom="10dp"
             android:clickable="true"
             android:elevation="0dp"
@@ -51,8 +50,17 @@
                 android:text="Card title"
                 android:textAlignment="center"
                 android:textColor="@android:color/black"
-                android:textSize="24dp"
+                android:textSize="20dp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/category"
+                android:layout_marginTop="10dp"
+                android:text="short desc"
+                android:textAlignment="center" />
 
 
         </RelativeLayout>

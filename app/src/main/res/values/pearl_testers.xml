@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2019 Project Pearl
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          https://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- testers -->
+    <string-array name="testers_title" translatable="false">
+        <item>Billou&amp;Audrey</item>
+        <item>D.Srinivas</item>
+        <item>Cake</item>
+    </string-array>
+
+    <!-- Devices testers -->
+    <string-array name="testers_devices" translatable="false">
+        <item>Redmi note 4 (mido)</item>
+        <item>Oneplus One (Bacon)</item>
+        <item>Redmi note 4 (mido)</item>
+    </string-array>
+
+    <!-- TG link for testers -->
+    <string-array name="testers_url" translatable="false">
+        <item>t.me/billouetaudrey</item> <!-- tester: Billou -->
+        <item>t.me/dsvasu</item> <!-- tester: D.Srinivas -->
+        <item>t.me/CakeSpJ993</item> <!-- tester: Cake -->
+    </string-array>
+
+</resources>
