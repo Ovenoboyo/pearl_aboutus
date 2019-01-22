@@ -28,8 +28,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="plus" />
-                            <entry key="sourceFile" value="C:\Users\sahil" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="ic_telegram_brands" />
+                            <entry key="sourceFile" value="E:\Git_clones\MyApplication\app\src\main\res\drawable\telegram-brands.svg" />
                           </map>
                         </option>
                       </PersistentState>

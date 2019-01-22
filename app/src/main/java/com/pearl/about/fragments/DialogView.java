@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.pearl.about.R;
 
@@ -19,6 +20,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class DialogView extends DialogFragment {
 
+    Toast mTapToast = null;
+    int mHitCount = 50;
     int DialogId;
     String github, telegram, xdalink;
 
@@ -120,6 +123,39 @@ public class DialogView extends DialogFragment {
     }
 
     private void TriggerEasterEgg() {
+        mHitCount--;
+        if (mHitCount == 45) {
+            if (mTapToast != null) {
+                mTapToast.cancel();
+            }
+            Toast.makeText(getContext(), "Wew, you figured it out, keep tapping",
+                    Toast.LENGTH_LONG).show();
+        } else if (mHitCount == 30) {
+            if (mTapToast != null) {
+                mTapToast.cancel();
+            }
+            Toast.makeText(getContext(), "Close enough, keep tapping",
+                    Toast.LENGTH_LONG).show();
+        } else if (mHitCount == 20) {
+            if (mTapToast != null) {
+                mTapToast.cancel();
+            }
+            Toast.makeText(getContext(), "Damn Just 20 more to go, JUST DO IT!!",
+                    Toast.LENGTH_LONG).show();
+        } else if (mHitCount == 10) {
+            if (mTapToast != null) {
+                mTapToast.cancel();
+            }
+            Toast.makeText(getContext(), "Oof, This is exciting!!",
+                    Toast.LENGTH_LONG).show();
+        } else if (mHitCount <= 0) {
+            if (mTapToast != null) {
+                mTapToast.cancel();
+            }
+            mHitCount++;
+            Toast.makeText(getContext(), "Congrats!! You've just wasted 10+secs of your life :)",
+                    Toast.LENGTH_LONG).show();
+        }
 
     }
 

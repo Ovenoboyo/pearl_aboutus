@@ -27,9 +27,9 @@
 
     <!-- TG link for testers -->
     <string-array name="testers_url" translatable="false">
-        <item>t.me/billouetaudrey</item> <!-- tester: Billou -->
-        <item>t.me/dsvasu</item> <!-- tester: D.Srinivas -->
-        <item>t.me/CakeSpJ993</item> <!-- tester: Cake -->
+        <item>https://t.me/billouetaudrey</item> <!-- tester: Billou -->
+        <item>https://t.me/dsvasu</item> <!-- tester: D.Srinivas -->
+        <item>https://t.me/CakeSpJ993</item> <!-- tester: Cake -->
     </string-array>
 
 </resources>
