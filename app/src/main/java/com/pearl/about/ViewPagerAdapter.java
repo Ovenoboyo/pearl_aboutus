@@ -2,14 +2,18 @@ package com.pearl.about;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.PagerAdapter;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.pearl.about.fragments.DialogView;
 
 import java.util.List;
 
@@ -20,11 +24,14 @@ public class ViewPagerAdapter extends PagerAdapter {
     private List<ViewPagerContainer> contents;
     private Context mContext;
     private Intent i = null;
+    FragmentManager fm;
+    Bundle bundl;
 
 
-    public ViewPagerAdapter(List<ViewPagerContainer> contents, Context mContext) {
+    public ViewPagerAdapter(List<ViewPagerContainer> contents, Context mContext, FragmentManager fm) {
         this.contents = contents;
         this.mContext = mContext;
+        this.fm = fm;
     }
 
     @Override
@@ -62,33 +69,32 @@ public class ViewPagerAdapter extends PagerAdapter {
             public void onClick(View v) {
                 switch (position) {
                     case 0:
-                        showDialog(mContext, R.layout.dialog0);
+                        showDialog(R.layout.dialog0, "github.com/sagarrokade006", "t.me/sagarrokade006", "forum.xda-developers.com/member.php?u=7312263");
                         break;
 
                     case 1:
-                        showDialog(mContext, R.layout.dialog1);
+                        showDialog(R.layout.dialog1, "duck.com", "duck.com", "duck.com");
                         break;
 
                     case 2:
-                        showDialog(mContext, R.layout.dialog2);
+                        showDialog(R.layout.dialog2, "github.com/Ovenoboyo", "t.me/ovenoboyo", "forum.xda-developers.com/member.php?u=6152318");
                         break;
 
                     case 3:
-                        showDialog(mContext, R.layout.dialog3);
+                        showDialog(R.layout.dialog3, "GitHub.com/beingmishra", " t.me/beingmishra", "duck.com");
                         break;
 
                     case 4:
-                        showDialog(mContext, R.layout.dialog4);
+                        showDialog(R.layout.dialog4, "github.com/czynot", "t.me/Void_Aspect", "www.YouSearchBsdk.com");
                         break;
 
                     case 5:
-                        showDialog(mContext, R.layout.dialog5);
+                        showDialog(R.layout.dialog5, "github.com/Nparte777", "t.me/nparte77", "duck.com");
                         break;
 
                     case 6:
-                        showDialog(mContext, R.layout.dialog6);
+                        showDialog(R.layout.dialog6, "github.com/Roker2", "t.me/Roker2", "duck.com");
                         break;
-
 
                     case 7:
                         if (i == null) {
@@ -122,16 +128,14 @@ public class ViewPagerAdapter extends PagerAdapter {
         container.removeView((View)object);
     }
 
-    private static void showDialog(Context context, int id) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
-                context );
-
-        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View dialogView = inflater.inflate(id, null);
-
-        alertDialogBuilder.setView(dialogView);
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
+    private void showDialog(int id, String github, String telegram, String xdalink) {
+        bundl = new Bundle();
+        bundl.putInt("ID", id);
+        bundl.putString("github", github);
+        bundl.putString("telegram", telegram);
+        bundl.putString("xdalink", xdalink);
+        DialogFragment newFragment = new DialogView();
+        newFragment.setArguments(bundl);
+        newFragment.show(fm, "dialog");
     }
 }

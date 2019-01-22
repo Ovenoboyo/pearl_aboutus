@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        FragmentManager fm = getSupportFragmentManager();
 
         setContentView(R.layout.main);
 
@@ -81,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
         }
 
 
-        mViewPagerAdapter = new ViewPagerAdapter(mContents, this);
+        mViewPagerAdapter = new ViewPagerAdapter(mContents, this, fm);
         mViewPager.setOffscreenPageLimit(10);
         mViewPager.setClipToPadding(false);
         mViewPager.setPageMargin(150);
