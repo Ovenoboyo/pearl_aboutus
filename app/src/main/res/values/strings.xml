@@ -16,16 +16,17 @@
     <string name="dev_desc5">The one who wasn\'t needed in the ROM team so jumped to the Website.</string>
     <string name="dev_short5">Website Developer and Server Manager</string>
     <string name="dev6">Nikhil Parte</string>
-    <string name="dev_desc6">Subscribe to PewDiePie and all the designs.</string>
+    <string name="dev_desc6">Subscribe to PewDiePie</string>
     <string name="dev_short6">Graphics Designer</string>
     <string name="dev7">Dmitry Minko</string>
     <string name="dev_desc7">Themes and stuff.</string>
     <string name="dev_short7">Themer</string>
     <string name="maintainers_title">Maintainers</string>
     <string name="testers_title">Testers</string>
-    <string name="maintainers_short">A bunch of random people</string>
+    <string name="maintainers_short">Build-Botsu OwO</string>
     <string name="testers_short">Lads who made this possible</string>
-
+    <string name="rominfo">Project-Pearl is an after-market firmware based on AOSP and we thank them for their sources. \n\n Project-Pearl was found by a bunch of newbies in Android Development, with the hope that we all end up learning something good. We are all contributing to the source and trying to give you the smoothest and optimized experience for your device. We are bringing in some new visuals to you because apparently everyone is bored with the same look, and eh, even us. So why not bring in the change?</string>
+    H
     <!-- Pearl Additions -->
     <string name="maintainer_description">Maintains for %1$s</string>
     <string name="tester_description">Tests for %1$s</string>

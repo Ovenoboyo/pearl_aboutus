@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.pearl.about.fragments.RomDialog;
 import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;
@@ -27,13 +29,14 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
     private ViewPagerAdapter mViewPagerAdapter;
     private ArrayList<ViewPagerContainer> mContents;
     private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 886;
+    private FragmentManager fm;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        FragmentManager fm = getSupportFragmentManager();
+        fm = getSupportFragmentManager();
 
         setContentView(R.layout.main);
 
@@ -67,6 +70,12 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
         ImageView topimg = findViewById(R.id.topimg);
         topimg.setOnLongClickListener(this);
+        topimg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                displayDialog(fm);
+            }
+        });
 
         //sagar,          satyam,         Oveno,           rahul,           parth,           nikhil,          dimitry
         int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3, R.drawable.dev4, R.drawable.dev5, R.drawable.dev6, R.drawable.dev7, R.drawable.maintainers, R.drawable.testers};
@@ -127,6 +136,11 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             // other 'case' lines to check for other
             // permissions this app might request.
         }
+    }
+
+    private void displayDialog(FragmentManager fm) {
+        DialogFragment newFragment = new RomDialog();
+        newFragment.show(fm, "dialog");
     }
 
 

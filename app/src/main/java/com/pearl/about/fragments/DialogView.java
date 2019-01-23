@@ -3,6 +3,8 @@ package com.pearl.about.fragments;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -53,9 +55,11 @@ public class DialogView extends DialogFragment {
             view = inflater.inflate(DialogId, nullParent);
         }
 
+
         alertDialogBuilder.setView(view);
         alertDialogBuilder.setCancelable(false);
         final AlertDialog dialog = alertDialogBuilder.create();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 
         ImageView git = null;
@@ -148,7 +152,7 @@ public class DialogView extends DialogFragment {
             }
             Toast.makeText(getContext(), "Oof, This is exciting!!",
                     Toast.LENGTH_LONG).show();
-        } else if (mHitCount <= 0) {
+        } else if (mHitCount <= 1) {
             if (mTapToast != null) {
                 mTapToast.cancel();
             }
@@ -156,8 +160,5 @@ public class DialogView extends DialogFragment {
             Toast.makeText(getContext(), "Congrats!! You've just wasted 10+secs of your life :)",
                     Toast.LENGTH_LONG).show();
         }
-
     }
-
-
 }

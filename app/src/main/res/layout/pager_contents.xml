@@ -21,9 +21,12 @@
             android:layout_marginBottom="10dp"
             android:clickable="true"
             android:elevation="0dp"
+            app:backgroundTint="#ffe259"
             app:elevation="0dp"
+            app:fabCustomSize="30dp"
             app:fabSize="mini"
-            app:srcCompat="@drawable/plus" />
+            app:srcCompat="@drawable/plus"
+            app:useCompatPadding="false" />
 
 
         <RelativeLayout

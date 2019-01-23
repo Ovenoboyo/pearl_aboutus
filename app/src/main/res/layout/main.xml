@@ -22,10 +22,12 @@
     <ImageView
         android:id="@+id/topimg"
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top|center"
+        android:layout_marginTop="35dp"
+        android:adjustViewBounds="true"
         android:clickable="true"
+        android:cropToPadding="false"
         android:src="@drawable/pearl" />
 
     <android.support.v4.view.ViewPager
