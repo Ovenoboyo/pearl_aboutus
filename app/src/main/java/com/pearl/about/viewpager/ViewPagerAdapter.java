@@ -1,4 +1,4 @@
-package com.pearl.about;
+package com.pearl.about.viewpager;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.pearl.about.Maintainers;
+import com.pearl.about.R;
+import com.pearl.about.Testers;
 import com.pearl.about.fragments.DialogView;
 
 import java.util.List;
@@ -21,11 +24,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ViewPagerAdapter extends PagerAdapter {
 
+    FragmentManager fm;
+    Bundle bundl;
     private List<ViewPagerContainer> contents;
     private Context mContext;
     private Intent i = null;
-    FragmentManager fm;
-    Bundle bundl;
 
 
     public ViewPagerAdapter(List<ViewPagerContainer> contents, Context mContext, FragmentManager fm) {
@@ -48,7 +51,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, final int position) {
-        LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View view = inflater.inflate(R.layout.pager_contents, container, false);
 
@@ -125,7 +128,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         super.destroyItem(container, position, object);
 
-        container.removeView((View)object);
+        container.removeView((View) object);
     }
 
     private void showDialog(int id, String github, String telegram, String xdalink) {

@@ -1,4 +1,4 @@
-package com.pearl.about;
+package com.pearl.about.viewpager;
 
 import android.support.v4.view.ViewPager;
 import android.view.View;
@@ -25,7 +25,7 @@ public class ZoomInTransformer implements ViewPager.PageTransformer {
         } else if (position > 0) {
             newpos = position - RighttOffset;
         }
-        float ScaleFactor = ((abs(newpos) + 1.3f)/(abs(newpos) + 1f));
+        float ScaleFactor = ((abs(newpos) + 1.3f) / (abs(newpos) + 1f));
         page.setScaleY(ScaleFactor);
         page.setScaleX(ScaleFactor);
     }

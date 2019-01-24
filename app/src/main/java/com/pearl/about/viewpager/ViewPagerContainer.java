@@ -1,4 +1,4 @@
-package com.pearl.about;
+package com.pearl.about.viewpager;
 
 public class ViewPagerContainer {
 

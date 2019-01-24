@@ -17,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.pearl.about.fragments.RomDialog;
+import com.pearl.about.viewpager.ViewPagerAdapter;
+import com.pearl.about.viewpager.ViewPagerContainer;
+import com.pearl.about.viewpager.ZoomInTransformer;
 import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.ArrayList;
