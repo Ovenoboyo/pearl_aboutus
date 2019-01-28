@@ -80,7 +80,7 @@ public class ViewPagerAdapter extends PagerAdapter {
                         break;
 
                     case 2:
-                        showDialog(R.layout.dialog2, "github.com/Ovenoboyo", "t.me/ovenoboyo", "forum.xda-developers.com/member.php?u=6152318");
+                        showDialog(R.layout.dialog2, "github.com/Ovenoboyo", "t.me/BlyatMan6969", "forum.xda-developers.com/member.php?u=6152318");
                         break;
 
                     case 3:
