@@ -13,9 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.pearl.about.Maintainers;
 import com.pearl.about.R;
-import com.pearl.about.Testers;
+import com.pearl.about.extras.Extras;
 import com.pearl.about.fragments.DialogView;
 
 import java.util.List;
@@ -101,15 +100,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
                     case 7:
                         if (i == null) {
-                            i = new Intent(mContext, Maintainers.class);
-                            mContext.startActivity(i);
-                        }
-                        i = null;
-                        break;
-
-                    case 8:
-                        if (i == null) {
-                            i = new Intent(mContext, Testers.class);
+                            i = new Intent(mContext, Extras.class);
                             mContext.startActivity(i);
                         }
                         i = null;

@@ -14,22 +14,22 @@
     <!-- testers -->
     <string-array name="testers_title" translatable="false">
         <item>Billou&amp;Audrey</item>
-        <item>D.Srinivas</item>
         <item>Cake</item>
+        <item>D.Srinivas</item>
     </string-array>
 
     <!-- Devices testers -->
     <string-array name="testers_devices" translatable="false">
         <item>Redmi note 4 (mido)</item>
-        <item>Oneplus One (Bacon)</item>
         <item>Redmi note 4 (mido)</item>
+        <item>Oneplus One (Bacon)</item>
     </string-array>
 
     <!-- TG link for testers -->
     <string-array name="testers_url" translatable="false">
         <item>https://t.me/billouetaudrey</item> <!-- tester: Billou -->
-        <item>https://t.me/dsvasu</item> <!-- tester: D.Srinivas -->
         <item>https://t.me/CakeSpJ993</item> <!-- tester: Cake -->
+        <item>https://t.me/dsvasu</item> <!-- tester: D.Srinivas -->
     </string-array>
 
 </resources>
