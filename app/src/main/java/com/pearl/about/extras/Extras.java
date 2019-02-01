@@ -58,6 +58,7 @@ public class Extras extends AppCompatActivity {
 
     }
 
+
     //#1
     public static class TCFragment extends Fragment {
         /**
@@ -94,6 +95,8 @@ public class Extras extends AppCompatActivity {
 
             String listArray2[] = getResources().getStringArray(R.array.testers_devices);
 
+            String UrlList[] = getResources().getStringArray(R.array.testers_url);
+
             int bgimageArray[] = new int[]{
                     R.drawable.tester1_bg,
                     R.drawable.tester2_bg,
@@ -106,11 +109,11 @@ public class Extras extends AppCompatActivity {
                     R.drawable.tester3
             };
 
-            int pos = getArguments().getInt(ARG_SECTION_NUMBER);
+            final int pos = getArguments().getInt(ARG_SECTION_NUMBER);
             Log.d(LOG_TAG, Integer.toString(pos));
 
             ListView listView = rootView.findViewById(R.id.list);
-            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray));
+            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray, UrlList));
             listView.setNestedScrollingEnabled(true);
             Log.d(LOG_TAG, "DONE");
             return rootView;
@@ -153,6 +156,8 @@ public class Extras extends AppCompatActivity {
 
             String listArray2[] = getResources().getStringArray(R.array.maintainers_devices);
 
+            String UrlList[] = getResources().getStringArray(R.array.maintainers_url);
+
             int bgimageArray[] = new int[]{
                     R.drawable.maintainer1_bg,
                     R.drawable.maintainer2_bg,
@@ -172,7 +177,7 @@ public class Extras extends AppCompatActivity {
             Log.d(LOG_TAG, Integer.toString(pos));
 
             ListView listView = rootView.findViewById(R.id.list);
-            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray));
+            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray, UrlList));
             listView.setNestedScrollingEnabled(true);
             Log.d(LOG_TAG, "DONE");
             return rootView;

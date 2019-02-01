@@ -14,7 +14,6 @@
         android:layout_margin="@dimen/cards_margin"
         android:clickable="true"
         android:foreground="?android:attr/selectableItemBackground"
-
         android:padding="@dimen/cards_padding"
         card_view:cardBackgroundColor="@color/cardsbg"
         card_view:cardElevation="@dimen/cards_elevation">

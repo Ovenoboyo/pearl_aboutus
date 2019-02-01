@@ -1,7 +1,10 @@
 package com.pearl.about.extras;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,13 +18,15 @@ public class TCAdapter extends BaseAdapter {
     private static LayoutInflater inflater = null;
     String[] name;
     String[] desc;
+    String UrlList[];
     Context context;
     int[] bgimage;
     int[] image;
 
-    public TCAdapter(FragmentActivity Activity, String[] devname, String[] devdesc, int[] devbgImage, int[] devimage) {
+    public TCAdapter(FragmentActivity Activity, String[] devname, String[] devdesc, int[] devbgImage, int[] devimage, String[] urllist) {
         name = devname;
         desc = devdesc;
+        UrlList = urllist;
         bgimage = devbgImage;
         image = devimage;
 
@@ -72,6 +77,17 @@ public class TCAdapter extends BaseAdapter {
 
             holder = (Holder) convertView.getTag();
         }
+
+        CardView card = convertView.findViewById(R.id.cardView);
+        card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = UrlList[position];
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                context.startActivity(browserIntent);
+            }
+        });
+
         return convertView;
     }
 
