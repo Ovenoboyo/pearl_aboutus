@@ -12,11 +12,12 @@
         android:layout_height="wrap_content"
         android:background="@android:color/black" />
 
-    <View android:id="@+id/center"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
+    <View
+        android:id="@+id/center"
         android:layout_width="1dp"
-        android:layout_height="1dp" />
+        android:layout_height="1dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp" />
 
 
     <ImageView
@@ -36,11 +37,11 @@
         android:layout_height="400dp"
         android:layout_gravity="bottom"
         android:overScrollMode="never"
-        android:paddingTop="60dp"
-        android:paddingBottom="60dp"
-        android:paddingEnd="@dimen/card_padding"
+        android:paddingStart="@dimen/card_padding"
         android:paddingLeft="@dimen/card_padding"
+        android:paddingTop="60dp"
+        android:paddingEnd="@dimen/card_padding"
         android:paddingRight="@dimen/card_padding"
-        android:paddingStart="@dimen/card_padding" />
+        android:paddingBottom="60dp" />
 
 </android.support.design.widget.CoordinatorLayout>

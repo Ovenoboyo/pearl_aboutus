@@ -33,7 +33,8 @@
                     android:id="@+id/bgimage"
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:scaleType="centerCrop"
+                    android:cropToPadding="true"
+                    android:scaleType="center"
                     android:src="@drawable/dev1"
                     tools:ignore="ContentDescription" />
 
