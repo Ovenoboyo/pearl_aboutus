@@ -106,13 +106,11 @@ public class Extras extends AppCompatActivity {
             int bgimageArray[] = new int[]{
                     R.drawable.tester1_bg,
                     R.drawable.tester2_bg,
-                    R.drawable.tester3_bg
             };
 
             int imageArray[] = new int[]{
                     R.drawable.tester1,
                     R.drawable.tester2,
-                    R.drawable.tester3
             };
 
             final int pos = getArguments().getInt(ARG_SECTION_NUMBER);
@@ -165,7 +163,6 @@ public class Extras extends AppCompatActivity {
             String UrlList[] = getResources().getStringArray(R.array.maintainers_url);
 
             int bgimageArray[] = new int[]{
-                    R.drawable.maintainer1_bg,
                     R.drawable.maintainer2_bg,
                     R.drawable.maintainer3_bg,
                     R.drawable.maintainer4_bg
@@ -173,7 +170,6 @@ public class Extras extends AppCompatActivity {
             };
 
             int imageArray[] = new int[]{
-                    R.drawable.maintainer1,
                     R.drawable.maintainer2,
                     R.drawable.maintainer3,
                     R.drawable.maintainer4
