@@ -9,21 +9,18 @@ import static java.lang.Math.abs;
 public class ZoomInTransformer implements ViewPager.PageTransformer {
 
     private float newpos;
-    private float RighttOffset;
-    private float LeftOffset;
 
     public ZoomInTransformer() {
     }
 
     @Override
     public void transformPage(View page, float position) {
-        RighttOffset = 0.3084849f;
-        LeftOffset = 0.3084849f;
+        float Offset = 0.3084849f;
         if (position < 0) {
-            newpos = position - LeftOffset;
+            newpos = position - Offset;
             //Log.d("pos", "position = " + LeftOffset);
         } else if (position > 0) {
-            newpos = position - RighttOffset;
+            newpos = position - Offset;
         }
         float ScaleFactor = ((abs(newpos) + 1.3f) / (abs(newpos) + 1f));
         page.setScaleY(ScaleFactor);

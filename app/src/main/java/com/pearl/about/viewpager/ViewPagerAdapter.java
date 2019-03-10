@@ -83,22 +83,26 @@ public class ViewPagerAdapter extends PagerAdapter {
                         break;
 
                     case 3:
-                        showDialog(R.layout.dialog3, "GitHub.com/beingmishra", " t.me/beingmishra", "duck.com");
+                        showDialog(R.layout.dialog3, "gitHub.com/beingmishra", " t.me/beingmishra", "duck.com");
                         break;
 
                     case 4:
-                        showDialog(R.layout.dialog4, "github.com/czynot", "t.me/Void_Aspect", "forum.xda-developers.com/member.php?u=9342352");
+                        showDialog(R.layout.dialog7, "github.com/AryanKedare", "t.me/aryankedare", "forum.xda-developers.com/member.php?u=6537039");
                         break;
 
                     case 5:
-                        showDialog(R.layout.dialog5, "github.com/Nparte777", "t.me/nparte77", "www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw?sub_confirmation=1");
+                        showDialog(R.layout.dialog4, "github.com/czynot", "t.me/Void_Aspect", "forum.xda-developers.com/member.php?u=9342352");
                         break;
 
                     case 6:
-                        showDialog(R.layout.dialog6, "github.com/Roker2", "t.me/Roker2", "duck.com");
+                        showDialog(R.layout.dialog5, "github.com/Nparte777", "t.me/nparte77", "www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw?sub_confirmation=1");
                         break;
 
                     case 7:
+                        showDialog(R.layout.dialog6, "github.com/Roker2", "t.me/Roker2", "duck.com");
+                        break;
+
+                    case 8:
                         if (i == null) {
                             i = new Intent(mContext, Extras.class);
                             mContext.startActivity(i);

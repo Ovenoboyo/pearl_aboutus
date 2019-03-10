@@ -30,10 +30,10 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity implements View.OnLongClickListener {
 
 
+    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 886;
     private ViewPager mViewPager;
     private ViewPagerAdapter mViewPagerAdapter;
     private ArrayList<ViewPagerContainer> mContents;
-    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 886;
     private FragmentManager fm;
 
 
@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             }
         });
 
-        //sagar,          satyam,         Oveno,           rahul,           parth,           nikhil,          dimitry
-        int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3, R.drawable.dev4, R.drawable.dev5, R.drawable.dev6, R.drawable.dev7, R.drawable.extras};
-        String cat[] = {getString(R.string.dev1), getString(R.string.dev2), getString(R.string.dev3), getString(R.string.dev4), getString(R.string.dev5), getString(R.string.dev6), getString(R.string.dev7), getString(R.string.extras)};
-        String desc[] = {getString(R.string.dev_short1), getString(R.string.dev_short2), getString(R.string.dev_short3), getString(R.string.dev_short4), getString(R.string.dev_short5), getString(R.string.dev_short6), getString(R.string.dev_short7), getString(R.string.extras_short)};
+        //sagar,          satyam,         Oveno,           rahul,         aryan,            parth,           nikhil,          dimitry
+        int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3, R.drawable.dev4, R.drawable.dev8, R.drawable.dev5, R.drawable.dev6, R.drawable.dev7, R.drawable.extras};
+        String cat[] = {getString(R.string.dev1), getString(R.string.dev2), getString(R.string.dev3), getString(R.string.dev4), getString(R.string.dev8), getString(R.string.dev5), getString(R.string.dev6), getString(R.string.dev7), getString(R.string.extras)};
+        String desc[] = {getString(R.string.dev_short1), getString(R.string.dev_short2), getString(R.string.dev_short3), getString(R.string.dev_short4), getString(R.string.dev_short8), getString(R.string.dev_short5), getString(R.string.dev_short6), getString(R.string.dev_short7), getString(R.string.extras_short)};
 
         for (int i = 0; i < icon.length; i++) {
             ViewPagerContainer viewpagercontainer = new ViewPagerContainer();
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
 
 
         mViewPagerAdapter = new ViewPagerAdapter(mContents, this, fm);
-        mViewPager.setOffscreenPageLimit(10);
+        mViewPager.setOffscreenPageLimit(11);
         mViewPager.setClipToPadding(false);
         mViewPager.setPageMargin(150);
         mViewPager.setPageTransformer(false, new ZoomInTransformer());

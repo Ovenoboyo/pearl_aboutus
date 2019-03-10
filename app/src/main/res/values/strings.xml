@@ -4,13 +4,13 @@
     <string name="dev_desc1">Android Lover Learning More About Android.</string>
     <string name="dev_short1">Founder | Lead Developer.</string>
     <string name="dev2">Satyam Sharma</string>
-    <string name="dev_desc2">I like don\'t ducks</string>
+    <string name="dev_desc2">Does something. No ones really sure what.</string>
     <string name="dev_short2">Co-founder | CoLead Developer</string>
     <string name="dev3">Ovenoboyo</string>
     <string name="dev_desc3">The person you blame when the custom apps in this ROM suck.</string>
     <string name="dev_short3">App developer | Memer</string>
     <string name="dev4">Rahul Mishra</string>
-    <string name="dev_desc4">Sucks balls</string>
+    <string name="dev_desc4">Doesn\'t even know what he is doing here.</string>
     <string name="dev_short4">Co-founder | CoLead-Developer</string>
     <string name="dev5">Parth Purvesh</string>
     <string name="dev_desc5">The one who wasn\'t needed in the ROM team so jumped to the Website.</string>
@@ -21,6 +21,9 @@
     <string name="dev7">Dmitry Minko</string>
     <string name="dev_desc7">Themes and stuff.</string>
     <string name="dev_short7">Themer</string>
+    <string name="dev8">Aryan Kedare</string>
+    <string name="dev_desc8">A Noob Trying to do something for Android community.</string>
+    <string name="dev_short8">OTA Management/Source Tester</string>
     <string name="extras">More Contributors</string>
     <string name="extras_short">Lads who made this possible</string>
     <string name="rominfo">Project-Pearl is an after-market firmware based on AOSP and we thank them for their sources. \n\n Project-Pearl was found by a bunch of newbies in Android Development, with the hope that we all end up learning something good. We are all contributing to the source and trying to give you the smoothest and optimized experience for your device. We are bringing in some new visuals to you because apparently everyone is bored with the same look, and eh, even us. So why not bring in the change?</string>
