@@ -79,6 +79,10 @@ public class DialogView extends DialogFragment {
 
         }
 
+        if (ImgId == R.drawable.dev3) {
+            oveno = icon;
+        }
+
         description.setText(desc);
         icon.setImageResource(ImgId);
 
