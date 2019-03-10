@@ -71,35 +71,35 @@ public class ViewPagerAdapter extends PagerAdapter {
             public void onClick(View v) {
                 switch (position) {
                     case 0:
-                        showDialog(R.layout.dialog0, "github.com/sagarrokade006", "t.me/sagarrokade006", "forum.xda-developers.com/member.php?u=7312263");
+                        showDialog(R.drawable.dev1, "github.com/sagarrokade006", "t.me/sagarrokade006", "forum.xda-developers.com/member.php?u=7312263", mContext.getString(R.string.dev_desc1));
                         break;
 
                     case 1:
-                        showDialog(R.layout.dialog1, "github.com/Dixzz", "t.me/Shatyam", "forum.xda-developers.com/member.php?u=6795851");
+                        showDialog(R.drawable.dev2, "github.com/Dixzz", "t.me/Shatyam", "forum.xda-developers.com/member.php?u=6795851", mContext.getString(R.string.dev_desc2));
                         break;
 
                     case 2:
-                        showDialog(R.layout.dialog2, "github.com/Ovenoboyo", "t.me/BlyatMan6969", "forum.xda-developers.com/member.php?u=6152318");
+                        showDialog(R.drawable.dev3, "github.com/Ovenoboyo", "t.me/BlyatMan6969", "forum.xda-developers.com/member.php?u=6152318", mContext.getString(R.string.dev_desc3));
                         break;
 
                     case 3:
-                        showDialog(R.layout.dialog3, "gitHub.com/beingmishra", " t.me/beingmishra", "duck.com");
+                        showDialog(R.drawable.dev4, "gitHub.com/beingmishra", " t.me/beingmishra", "duck.com", mContext.getString(R.string.dev_desc4));
                         break;
 
                     case 4:
-                        showDialog(R.layout.dialog7, "github.com/AryanKedare", "t.me/aryankedare", "forum.xda-developers.com/member.php?u=6537039");
+                        showDialog(R.drawable.dev8, "github.com/AryanKedare", "t.me/aryankedare", "forum.xda-developers.com/member.php?u=6537039", mContext.getString(R.string.dev_desc8));
                         break;
 
                     case 5:
-                        showDialog(R.layout.dialog4, "github.com/czynot", "t.me/Void_Aspect", "forum.xda-developers.com/member.php?u=9342352");
+                        showDialog(R.drawable.dev5, "github.com/czynot", "t.me/Void_Aspect", "forum.xda-developers.com/member.php?u=9342352", mContext.getString(R.string.dev_desc5));
                         break;
 
                     case 6:
-                        showDialog(R.layout.dialog5, "github.com/Nparte777", "t.me/nparte77", "www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw?sub_confirmation=1");
+                        showDialog(R.drawable.dev6, "github.com/Nparte777", "t.me/nparte77", "www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw?sub_confirmation=1", mContext.getString(R.string.dev_desc6));
                         break;
 
                     case 7:
-                        showDialog(R.layout.dialog6, "github.com/Roker2", "t.me/Roker2", "duck.com");
+                        showDialog(R.drawable.dev7, "github.com/Roker2", "t.me/Roker2", "duck.com", mContext.getString(R.string.dev_desc7));
                         break;
 
                     case 8:
@@ -126,12 +126,13 @@ public class ViewPagerAdapter extends PagerAdapter {
         container.removeView((View) object);
     }
 
-    private void showDialog(int id, String github, String telegram, String xdalink) {
+    private void showDialog(int img, String github, String telegram, String xdalink, String desc) {
         bundl = new Bundle();
-        bundl.putInt("ID", id);
+        bundl.putInt("img", img);
         bundl.putString("github", github);
         bundl.putString("telegram", telegram);
         bundl.putString("xdalink", xdalink);
+        bundl.putString("desc", desc);
         DialogFragment newFragment = new DialogView();
         newFragment.setArguments(bundl);
         newFragment.show(fm, "dialog");

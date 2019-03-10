@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.pearl.about.R;
@@ -24,8 +25,8 @@ public class DialogView extends DialogFragment {
 
     Toast mTapToast = null;
     int mHitCount = 50;
-    int DialogId;
-    String github, telegram, xdalink;
+    int ImgId;
+    String github, telegram, xdalink, desc, name;
 
     public DialogView() {
     }
@@ -41,10 +42,11 @@ public class DialogView extends DialogFragment {
 
         Bundle bundle = getArguments();
 
-        DialogId = bundle.getInt("ID");
+        ImgId = bundle.getInt("img");
         github = bundle.getString("github");
         telegram = bundle.getString("telegram");
         xdalink = bundle.getString("xdalink");
+        desc = bundle.getString("desc");
 
         final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = (LayoutInflater) getContext()
@@ -52,9 +54,8 @@ public class DialogView extends DialogFragment {
         final ViewGroup nullParent = null;
         View view = null;
         if (inflater != null) {
-            view = inflater.inflate(DialogId, nullParent);
+            view = inflater.inflate(R.layout.dialog0, nullParent);
         }
-
 
         alertDialogBuilder.setView(view);
         alertDialogBuilder.setCancelable(false);
@@ -62,18 +63,24 @@ public class DialogView extends DialogFragment {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
 
+        TextView description = null;
         ImageView git = null;
         ImageView tg = null;
         ImageView xda = null;
         CircleImageView oveno = null;
+        CircleImageView icon = null;
 
         if (view != null) {
             git = view.findViewById(R.id.github);
             tg = view.findViewById(R.id.telegram);
             xda = view.findViewById(R.id.xda);
-            oveno = view.findViewById(R.id.ovenicon);
+            description = view.findViewById(R.id.txt_dia);
+            icon = view.findViewById(R.id.icon);
 
         }
+
+        description.setText(desc);
+        icon.setImageResource(ImgId);
 
         if (git != null && tg != null && xda != null) {
             git.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +107,7 @@ public class DialogView extends DialogFragment {
         }
 
         if (oveno != null) {
+            oveno.setImageResource(ImgId);
             oveno.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

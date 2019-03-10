@@ -26,7 +26,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="20dp"
-        android:text="@string/dev_desc1"
+        android:text="@string/unknown"
         android:textAlignment="center"
         android:textColor="@color/PrimaryText"
         android:textSize="18dp" />
