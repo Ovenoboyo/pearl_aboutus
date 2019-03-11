@@ -51,7 +51,7 @@
                 android:layout_below="@id/icon"
                 android:layout_marginTop="20dp"
                 android:text="Card title"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="@android:color/black"
                 android:textSize="20dp"
                 android:textStyle="bold" />
@@ -63,7 +63,7 @@
                 android:layout_below="@id/category"
                 android:layout_marginTop="10dp"
                 android:text="short desc"
-                android:textAlignment="center" />
+                android:gravity="center" />
 
 
         </RelativeLayout>
