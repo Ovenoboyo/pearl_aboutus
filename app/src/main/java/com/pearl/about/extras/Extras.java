@@ -10,6 +10,9 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +20,6 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
 
 import com.pearl.about.R;
 
@@ -116,9 +118,12 @@ public class Extras extends AppCompatActivity {
             final int pos = getArguments().getInt(ARG_SECTION_NUMBER);
             Log.d(LOG_TAG, Integer.toString(pos));
 
-            ListView listView = rootView.findViewById(R.id.list);
-            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray, UrlList));
-            listView.setNestedScrollingEnabled(true);
+            RecyclerView recyclerView = rootView.findViewById(R.id.tcListView);
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+            recyclerView.setLayoutManager(mLayoutManager);
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            recyclerView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, imageArray, bgimageArray, UrlList));
+            recyclerView.setNestedScrollingEnabled(true);
             Log.d(LOG_TAG, "DONE");
             return rootView;
         }
@@ -165,22 +170,29 @@ public class Extras extends AppCompatActivity {
             int bgimageArray[] = new int[]{
                     R.drawable.maintainer2_bg,
                     R.drawable.maintainer3_bg,
-                    R.drawable.maintainer4_bg
+                    R.drawable.maintainer4_bg,
+                    R.drawable.maintainer5_bg,
+                    R.drawable.maintainer6_bg
 
             };
 
             int imageArray[] = new int[]{
                     R.drawable.maintainer2,
                     R.drawable.maintainer3,
-                    R.drawable.maintainer4
+                    R.drawable.maintainer4,
+                    R.drawable.maintainer5,
+                    R.drawable.maintainer6
             };
 
             int pos = getArguments().getInt(ARG_SECTION_NUMBER);
             Log.d(LOG_TAG, Integer.toString(pos));
 
-            ListView listView = rootView.findViewById(R.id.list);
-            listView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, bgimageArray, imageArray, UrlList));
-            listView.setNestedScrollingEnabled(true);
+            RecyclerView recyclerView = rootView.findViewById(R.id.tcListView);
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
+            recyclerView.setLayoutManager(mLayoutManager);
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            recyclerView.setAdapter(new TCAdapter(getActivity(), listArray1, listArray2, imageArray, bgimageArray, UrlList));
+            recyclerView.setNestedScrollingEnabled(true);
             Log.d(LOG_TAG, "DONE");
             return rootView;
         }

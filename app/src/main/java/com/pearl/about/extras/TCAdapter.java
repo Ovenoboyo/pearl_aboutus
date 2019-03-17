@@ -4,95 +4,73 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.FragmentActivity;
-import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.pearl.about.R;
 
-public class TCAdapter extends BaseAdapter {
+public class TCAdapter extends RecyclerView.Adapter<TCAdapter.ViewHolder> {
+
+    private String[] tcMemberName, tcMemberDesc, uriArray;
+    private Context context;
+    private int[] tcMemberDp, tcMemberBg;
     private static LayoutInflater inflater = null;
-    String[] name;
-    String[] desc;
-    String UrlList[];
-    Context context;
-    int[] bgimage;
-    int[] image;
 
-    public TCAdapter(FragmentActivity Activity, String[] devname, String[] devdesc, int[] devbgImage, int[] devimage, String[] urllist) {
-        name = devname;
-        desc = devdesc;
-        UrlList = urllist;
-        bgimage = devbgImage;
-        image = devimage;
-
+    public TCAdapter(FragmentActivity Activity, String[] tcMemberName, String[] tcMemberDesc, int[] tcMemberDp, int[] tcMemberBg, String[] uriArray) {
+        this.tcMemberName = tcMemberName;
+        this.tcMemberDesc = tcMemberDesc;
+        this.tcMemberDp = tcMemberDp;
+        this.tcMemberBg = tcMemberBg;
+        this.uriArray = uriArray;
         context = Activity;
-        inflater = (LayoutInflater) context.
-                getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
-    public int getCount() {
-        return name.length;
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View itemView = inflater.inflate(R.layout.tccard_item, parent, false);
+        return new ViewHolder(itemView);
     }
 
     @Override
-    public Object getItem(int position) {
-        return position;
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(final int position, View convertView, ViewGroup parent) {
-        Holder holder;
-
-        if (convertView == null) {
-
-            convertView = inflater.inflate(R.layout.tccard_item, parent, false);
-
-            holder = new Holder();
-            holder.tv1 = convertView.findViewById(R.id.cardtitle);
-            holder.tv2 = convertView.findViewById(R.id.carddescription);
-            holder.img1 = convertView.findViewById(R.id.bgimage);
-            holder.img2 = convertView.findViewById(R.id.cardimage);
-            holder.tv1.setText(name[position]);
-            holder.tv2.setText(desc[position]);
-            holder.img1.setImageResource(bgimage[position]);
-            holder.img2.setImageResource(image[position]);
-
-            convertView.setTag(holder);
-
-        } else {
-
-            holder = (Holder) convertView.getTag();
-        }
-
-        CardView card = convertView.findViewById(R.id.cardView);
-        card.setOnClickListener(new View.OnClickListener() {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
+        holder.tcMemberName.setText(tcMemberName[position]);
+        holder.tcMemberDesc.setText(tcMemberDesc[position]);
+        holder.tcMemberDp.setImageResource(tcMemberDp[position]);
+        holder.tcMemberBg.setImageResource(tcMemberBg[position]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String url = UrlList[position];
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                context.startActivity(browserIntent);
+            public void onClick(View v) {
+                if (!uriArray[position].equals(""))
+                    context.startActivity(new Intent(android.content.Intent.ACTION_VIEW)
+                            .setData(Uri.parse(uriArray[position])));
+                else
+                    Toast.makeText(context.getApplicationContext(), "Nae Nae. Not Yet!", Toast.LENGTH_LONG).show();
             }
         });
-
-        return convertView;
     }
 
-    public class Holder {
-        TextView tv1;
-        TextView tv2;
-        ImageView img1;
-        ImageView img2;
+    @Override
+    public int getItemCount() {
+        return tcMemberName.length;
     }
 
+    public class ViewHolder extends RecyclerView.ViewHolder {
+
+        public TextView tcMemberName, tcMemberDesc;
+        public ImageView tcMemberDp, tcMemberBg;
+
+        public ViewHolder(View itemView) {
+            super(itemView);
+            tcMemberName = itemView.findViewById(R.id.tcMemberName);
+            tcMemberDesc = itemView.findViewById(R.id.tcMemberDesc);
+            tcMemberDp = itemView.findViewById(R.id.tcMemberDp);
+            tcMemberBg = itemView.findViewById(R.id.tcMemberBg);
+        }
+    }
 }
