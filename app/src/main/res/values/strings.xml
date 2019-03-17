@@ -25,6 +25,9 @@
     <string name="dev8">Aryan Kedare</string>
     <string name="dev_desc8">A Noob Trying to do something for Android community.</string>
     <string name="dev_short8">OTA Management | Source Tester</string>
+    <string name="billou">Aurélien Dispenzae</string>
+    <string name="billou_desc">Without him we wouldn\'t be here</string>
+    <string name="billou_short">Helper | Contributor</string>
     <string name="extras">More Contributors</string>
     <string name="extras_short">Lads who made this possible</string>
     <string name="rominfo">Project-Pearl is an after-market firmware based on AOSP and we thank them for their sources. \n\n Project-Pearl was found by a bunch of newbies in Android Development, with the hope that we all end up learning something good. We are all contributing to the source and trying to give you the smoothest and optimized experience for your device. We are bringing in some new visuals to you because apparently everyone is bored with the same look, and eh, even us. So why not bring in the change?</string>

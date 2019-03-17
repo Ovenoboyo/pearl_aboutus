@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
             }
         });
 
-        //sagar,          satyam,         Oveno,           rahul,         aryan,            parth,           nikhil,          dimitry
-        int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3, R.drawable.dev4, R.drawable.dev8, R.drawable.dev5, R.drawable.dev6, R.drawable.dev7, R.drawable.extras};
-        String cat[] = {getString(R.string.dev1), getString(R.string.dev2), getString(R.string.dev3), getString(R.string.dev4), getString(R.string.dev8), getString(R.string.dev5), getString(R.string.dev6), getString(R.string.dev7), getString(R.string.extras)};
-        String desc[] = {getString(R.string.dev_short1), getString(R.string.dev_short2), getString(R.string.dev_short3), getString(R.string.dev_short4), getString(R.string.dev_short8), getString(R.string.dev_short5), getString(R.string.dev_short6), getString(R.string.dev_short7), getString(R.string.extras_short)};
+        //                 sagar,          satyam,         Oveno,           rahul,         aryan,            parth,           nikhil,          dimitry,        billou-senpai
+        int icon[] = {R.drawable.dev1, R.drawable.dev2, R.drawable.dev3, R.drawable.dev4, R.drawable.dev8, R.drawable.dev5, R.drawable.dev6, R.drawable.tester1, R.drawable.extras};
+        String cat[] = {getString(R.string.dev1), getString(R.string.dev2), getString(R.string.dev3), getString(R.string.dev4), getString(R.string.dev8), getString(R.string.dev5), getString(R.string.dev6), getString(R.string.billou), getString(R.string.extras)};
+        String desc[] = {getString(R.string.dev_short1), getString(R.string.dev_short2), getString(R.string.dev_short3), getString(R.string.dev_short4), getString(R.string.dev_short8), getString(R.string.dev_short5), getString(R.string.dev_short6), getString(R.string.billou_short), getString(R.string.extras_short)};
 
         for (int i = 0; i < icon.length; i++) {
             ViewPagerContainer viewpagercontainer = new ViewPagerContainer();
