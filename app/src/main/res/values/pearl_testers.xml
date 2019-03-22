@@ -15,18 +15,31 @@
     <string-array name="testers_title" translatable="false">
         <item>Billou&amp;Audrey</item>
         <item>Cake</item>
+        <item>Mellow</item>
+        <!--<item>Eko Marssetiawan</item> -->
+        <item>Ishant Chopra</item>
+        <item>Ashutosh</item>
     </string-array>
 
     <!-- Devices testers -->
     <string-array name="testers_devices" translatable="false">
         <item>Redmi note 4 (mido)</item>
         <item>Redmi note 4 (mido)</item>
+        <item>Zenfone Max Pro M1 (X00T)</item>
+        <!--<item>Redmi Note 5 / 5 plus (vince)</item> -->
+        <item>OnePlus one (bacon)</item>
+        <item>OnePlus one (bacon)</item>
+
     </string-array>
 
     <!-- TG link for testers -->
     <string-array name="testers_url" translatable="false">
         <item>https://t.me/billouetaudrey</item> <!-- tester: Billou -->
         <item>https://t.me/GunnerC1993</item> <!-- tester: Cake -->
+        <item>https://t.me/Mellow04</item> <!-- tester: Mellow -->
+        <!--  <item>https://t.me/ekowanz</item>  tester: Eko Marssetiawan -->
+        <item>https://t.me/ishantchopra</item> <!-- tester: Ishant -->
+        <item>https://t.me/TheCursedBoon</item> <!-- tester: Ashutosh -->
     </string-array>
 
 </resources>

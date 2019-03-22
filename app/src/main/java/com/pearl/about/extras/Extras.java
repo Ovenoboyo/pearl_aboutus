@@ -108,11 +108,19 @@ public class Extras extends AppCompatActivity {
             int bgimageArray[] = new int[]{
                     R.drawable.tester1_bg,
                     R.drawable.tester2_bg,
+                    R.drawable.tester3_bg,
+                    //R.drawable.tester4_bg,
+                    R.drawable.tester5_bg,
+                    R.drawable.tester6_bg
             };
 
             int imageArray[] = new int[]{
                     R.drawable.tester1,
                     R.drawable.tester2,
+                    R.drawable.tester3,
+                    //R.drawable.tester4,
+                    R.drawable.tester5,
+                    R.drawable.tester6
             };
 
             final int pos = getArguments().getInt(ARG_SECTION_NUMBER);
@@ -171,8 +179,9 @@ public class Extras extends AppCompatActivity {
                     R.drawable.maintainer2_bg,
                     R.drawable.maintainer3_bg,
                     R.drawable.maintainer4_bg,
-                    R.drawable.maintainer5_bg,
-                    R.drawable.maintainer6_bg
+                    //R.drawable.maintainer5_bg,
+                    R.drawable.maintainer6_bg,
+                    R.drawable.maintainer7_bg
 
             };
 
@@ -180,8 +189,9 @@ public class Extras extends AppCompatActivity {
                     R.drawable.maintainer2,
                     R.drawable.maintainer3,
                     R.drawable.maintainer4,
-                    R.drawable.maintainer5,
-                    R.drawable.maintainer6
+                    //R.drawable.maintainer5,
+                    R.drawable.maintainer6,
+                    R.drawable.maintainer7
             };
 
             int pos = getArguments().getInt(ARG_SECTION_NUMBER);
@@ -221,7 +231,7 @@ public class Extras extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
+            // Show 2 total pages.
             return 2;
         }
 
