@@ -16,7 +16,7 @@
         <item>Rahul Mishra</item>
         <item>Sagar Rokade</item>
         <item>Mohit Torani</item>
-        <!--<item>Hitesh</item>-->
+        <item>Shantanu Singh</item>
         <item>Himanshu Naamdev</item>
         <item>Vivek Bhagat</item>
     </string-array>
@@ -26,7 +26,7 @@
         <item>Oneplus One (Bacon)</item>
         <item>Redmi note 4 (mido)</item>
         <item>Redmi note 3 (kenzo)</item>
-        <!--<item>Redmi note 5/5 plus (Vince)</item> -->
+        <item>Redmi note 5/5 plus (Vince)</item>
         <item>Mi A1 (tissot)</item>
         <item>Zenfone Max Pro M1 (X00T)</item>
     </string-array>
@@ -36,7 +36,7 @@
         <item>https://github.com/beingmishra</item> <!-- Maintainer: Rahul Mishra -->
         <item>https://github.com/sagarrokade006</item> <!-- Maintainer: Sagar Rokade -->
         <item>https://t.me/mudi_ji</item> <!-- Maintainer: Mohit Torani -->
-        <!--<item>https://t.me/hiteshhv</item>  Maintainer: Hitesh -->
+        <item>https://t.me/ShantanuSingh</item>  <!-- Maintainer: Shantanu Singh -->
         <item>https://t.me/hnaamdev41</item> <!-- Maintainer: Himanshu -->
         <item>https://t.me/VivekBhagat</item> <!-- Maintainer: Vivek -->
     </string-array>

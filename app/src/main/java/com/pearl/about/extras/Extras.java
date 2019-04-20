@@ -179,7 +179,7 @@ public class Extras extends AppCompatActivity {
                     R.drawable.maintainer2_bg,
                     R.drawable.maintainer3_bg,
                     R.drawable.maintainer4_bg,
-                    //R.drawable.maintainer5_bg,
+                    R.drawable.maintainer5_bg,
                     R.drawable.maintainer6_bg,
                     R.drawable.maintainer7_bg
 
@@ -189,7 +189,7 @@ public class Extras extends AppCompatActivity {
                     R.drawable.maintainer2,
                     R.drawable.maintainer3,
                     R.drawable.maintainer4,
-                    //R.drawable.maintainer5,
+                    R.drawable.maintainer5,
                     R.drawable.maintainer6,
                     R.drawable.maintainer7
             };
