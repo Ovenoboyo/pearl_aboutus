@@ -18,6 +18,7 @@
         <item>Shantanu Singh</item>
         <item>Himanshu Naamdev</item>
         <item>Vivek Bhagat</item>
+        <item>Pratik Goswami</item>
     </string-array>
 
     <!-- Devices maintained by maintainer -->
@@ -28,6 +29,7 @@
         <item>Redmi note 5/5 plus (Vince)</item>
         <item>Mi A1 (tissot)</item>
         <item>Zenfone Max Pro M1 (X00T)</item>
+        <item>Redmi 4A (Rolex)</item>
     </string-array>
 
     <!-- GitHub link of maintainer -->
@@ -37,6 +39,7 @@
         <item>https://t.me/ShantanuSingh</item>  <!-- Maintainer: Shantanu Singh -->
         <item>https://t.me/hnaamdev41</item> <!-- Maintainer: Himanshu -->
         <item>https://t.me/VivekBhagat</item> <!-- Maintainer: Vivek -->
+        <item>https://t.me/PM_The_Angry</item>
     </string-array>
 
 </resources>

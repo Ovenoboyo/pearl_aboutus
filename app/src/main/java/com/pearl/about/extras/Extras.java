@@ -180,7 +180,8 @@ public class Extras extends AppCompatActivity {
                     R.drawable.maintainer4_bg,
                     R.drawable.maintainer5_bg,
                     R.drawable.maintainer6_bg,
-                    R.drawable.maintainer7_bg
+                    R.drawable.maintainer7_bg,
+                    R.drawable.maintainer8_bg
 
             };
 
@@ -189,7 +190,8 @@ public class Extras extends AppCompatActivity {
                     R.drawable.maintainer4,
                     R.drawable.maintainer5,
                     R.drawable.maintainer6,
-                    R.drawable.maintainer7
+                    R.drawable.maintainer7,
+                    R.drawable.maintainer8
             };
 
             int pos = getArguments().getInt(ARG_SECTION_NUMBER);
