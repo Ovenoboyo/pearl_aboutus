@@ -14,7 +14,6 @@
     <!-- Maintainers -->
     <string-array name="maintainers_title" translatable="false">
         <item>Rahul Mishra</item>
-        <item>Sagar Rokade</item>
         <item>Mohit Torani</item>
         <item>Shantanu Singh</item>
         <item>Himanshu Naamdev</item>
@@ -23,8 +22,8 @@
 
     <!-- Devices maintained by maintainer -->
     <string-array name="maintainers_devices" translatable="false">
-        <item>Oneplus One (Bacon)</item>
-        <item>Redmi note 4 (mido)</item>
+        <item>Oneplus One (Bacon)/
+              Redmi note 4 (mido)</item>
         <item>Redmi note 3 (kenzo)</item>
         <item>Redmi note 5/5 plus (Vince)</item>
         <item>Mi A1 (tissot)</item>
@@ -34,7 +33,6 @@
     <!-- GitHub link of maintainer -->
     <string-array name="maintainers_url" translatable="false">
         <item>https://github.com/beingmishra</item> <!-- Maintainer: Rahul Mishra -->
-        <item>https://github.com/sagarrokade006</item> <!-- Maintainer: Sagar Rokade -->
         <item>https://t.me/mudi_ji</item> <!-- Maintainer: Mohit Torani -->
         <item>https://t.me/ShantanuSingh</item>  <!-- Maintainer: Shantanu Singh -->
         <item>https://t.me/hnaamdev41</item> <!-- Maintainer: Himanshu -->
