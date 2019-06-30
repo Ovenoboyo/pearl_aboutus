@@ -19,17 +19,18 @@
         <item>Himanshu Naamdev</item>
         <item>Vivek Bhagat</item>
         <item>Aditya</item>
+        <item>Billou&amp;Audrey</item
     </string-array>
 
     <!-- Devices maintained by maintainer -->
     <string-array name="maintainers_devices" translatable="false">
-        <item>Oneplus One (Bacon)/
-              Redmi note 4 (mido)</item>
+        <item>Oneplus One (Bacon)</item>
         <item>Redmi note 3 (kenzo)</item>
         <item>Redmi note 5/5 plus (Vince)</item>
         <item>Mi A1 (tissot)</item>
         <item>Zenfone Max Pro M1 (X00T)</item>
         <item>Redmi 4A (Rolex)</item>
+        <item>Redmi note 4 (mido)</item>
     </string-array>
 
     <!-- GitHub link of maintainer -->
@@ -39,7 +40,8 @@
         <item>https://t.me/ShantanuSingh</item>  <!-- Maintainer: Shantanu Singh -->
         <item>https://t.me/hnaamdev41</item> <!-- Maintainer: Himanshu -->
         <item>https://t.me/VivekBhagat</item> <!-- Maintainer: Vivek -->
-        <item>https://t.me/adi153</item>
+        <item>https://t.me/adi153</item>  <!-- Maintainer: Aditya -->
+        <item>https://t.me/billouetaudrey</item> <!-- Maintainer: Billou -->
     </string-array>
 
 </resources>
